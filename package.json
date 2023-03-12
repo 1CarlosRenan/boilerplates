@@ -30,7 +30,7 @@
   "lint-staged": {
     "src/**/*": [
       "npm run lint --fix",
-      "npm test -- --watchAll=false --passWithNoTests"
+      "npm test -- --watchAll=false --findRelatedTests --bail"
     ]
   },
   "eslintConfig": {
