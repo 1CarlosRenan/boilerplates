@@ -1,6 +1,8 @@
 import logo from './logo.svg'
 import './App.css'
 
+const bla = 'teste'
+
 function App() {
   return (
     <div className='App'>
