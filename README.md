@@ -7,6 +7,7 @@
 - husky
 - lint staged
 - styled-components
+    - jest-styled-components
 
 ### extensions
 

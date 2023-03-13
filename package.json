@@ -54,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-test-renderer": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
     "eslint": "^8.36.0",
@@ -62,7 +63,9 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
+    "jest-styled-components": "^7.1.1",
     "lint-staged": "^13.2.0",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "react-test-renderer": "^18.2.0"
   }
 }
