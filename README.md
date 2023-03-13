@@ -9,6 +9,7 @@
 - styled-components
     - jest-styled-components
 - editor config
+- storybook
 
 ### extensions
 

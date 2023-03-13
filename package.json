@@ -25,20 +25,32 @@
     "test:coverage": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint src --max-warnings=0",
-    "lint:fix": "eslint src --max-warnings=0",
+    "lint:fix": "eslint src --max-warnings=0 --fix",
     "format": "prettier --write ./src/**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "lint-staged": {
-    "src/**/*": [
-      "npm run lint --fix",
-      "npm test -- --watchAll=false --findRelatedTests --bail"
+    "*.{ts,tsx,js}": [
+      "eslint --fix --max-warnings 0 --ignore-path '.eslintignore'",
+      "prettier --ignore-path .eslintignore --write"
     ]
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -54,18 +66,32 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/node-logger": "^6.5.16",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react-test-renderer": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
+    "babel-plugin-named-exports-order": "^0.0.2",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.11",
     "husky": "^8.0.3",
     "jest-styled-components": "^7.1.1",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.4",
-    "react-test-renderer": "^18.2.0"
+    "prop-types": "^15.8.1",
+    "react-test-renderer": "^18.2.0",
+    "webpack": "^5.76.1"
   }
 }
