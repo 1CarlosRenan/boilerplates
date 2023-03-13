@@ -2,10 +2,12 @@ import logo from './logo.svg'
 import './App.css'
 
 import * as S from './styles'
+import GlobalStyles from './styles/global'
 
 function App() {
   return (
     <S.Container>
+      <GlobalStyles />
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
         <p>
