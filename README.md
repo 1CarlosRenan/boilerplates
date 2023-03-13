@@ -6,6 +6,7 @@
 - prettier
 - husky
 - lint staged
+- styled-components
 
 ### extensions
 
