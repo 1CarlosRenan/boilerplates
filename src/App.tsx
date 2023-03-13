@@ -1,9 +1,11 @@
 import logo from './logo.svg'
 import './App.css'
 
+import * as S from './styles'
+
 function App() {
   return (
-    <div className='App'>
+    <S.Container>
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
         <p>
@@ -18,7 +20,7 @@ function App() {
           Learn react
         </a>
       </header>
-    </div>
+    </S.Container>
   )
 }
 
